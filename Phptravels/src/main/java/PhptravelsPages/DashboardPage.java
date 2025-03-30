@@ -7,11 +7,12 @@ public class DashboardPage extends PageBase {
     }
     String url = "https://phptravels.net/";  //expected Result
 
-    public String dashboardText = "Dashboard";
+    /*public String ActualResultAssertr(String ErrorMassage){
+        return driver.("Select From Airport");
+    }
 
-    /*By actualResult =By.xpath("");
-
-    public String ActualResultAssert(){
+    public String ActualResultAssert(String ActualResultPath){
+        By actualResult = By.xpath(ActualResultPath);
         return driver.findElement(actualResult).getText();
     }*/
 }
