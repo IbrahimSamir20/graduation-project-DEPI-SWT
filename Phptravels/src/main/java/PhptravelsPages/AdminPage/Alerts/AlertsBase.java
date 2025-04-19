@@ -11,7 +11,7 @@ public class AlertsBase extends PageBase{
     public void displayAlerts (){
         clickOnElement(AlertsButton);
     }
-    public void DeleteAlert(){
+    public void deleteAlert(){
         clickOnElement(DeleteAlertButton);
     }
 }
