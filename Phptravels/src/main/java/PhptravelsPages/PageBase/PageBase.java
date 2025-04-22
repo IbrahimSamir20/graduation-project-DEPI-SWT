@@ -1,14 +1,18 @@
 package PhptravelsPages.PageBase;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
+
 public class PageBase {
-    WebDriver driver;
-    public static long Wait =200;
+    public WebDriver driver;
+    public static Duration Wait= Duration.ofSeconds(200);
     public PageBase(WebDriver driver) {
         this.driver = driver;
     }
@@ -43,4 +47,19 @@ public class PageBase {
         Select oprions = new Select(driver.findElement(element));
         oprions.selectByVisibleText(option);
     }
+    public void scrolldown()
+    {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0,0)");
+    }
+    public  void scrollUp( int pixels) {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0, -" + pixels + ")");
+    }
+
+    public  void scrollToTop() {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollTo(0,0)");
+}
+
 }
