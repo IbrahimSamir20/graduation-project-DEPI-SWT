@@ -43,4 +43,14 @@ public class PageBase {
         Select oprions = new Select(driver.findElement(element));
         oprions.selectByVisibleText(option);
     }
+    public String getText(By element){
+        waiTimeToBeVisible(element);
+        return driver.findElement(element).getText();
+    }
+    public boolean isAPPeared (By element){
+        if(driver.findElement(element).isDisplayed()){
+            return true;
+        }
+        return false;
+    }
 }
