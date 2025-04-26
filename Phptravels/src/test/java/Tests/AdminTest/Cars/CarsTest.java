@@ -87,6 +87,82 @@ public class CarsTest extends AdminTestBase {
         Thread.sleep(2000);
         car.clicksave();
         Thread.sleep(3000);
+        //not complete waiting for scroll up fuction
     }
+    @Test
+    public void whenclickaddandfilldatathenclicksaveacaryouaddshoulddisplayoncarswiththesamedataedited() throws InterruptedException {
+        login.adminLogin();
+        Thread.sleep(2000);
+        car.clickcarsbutton();
+        Thread.sleep(2000);
+        car.clicksubbuttoncars();
+        Thread.sleep(2000);
+        car.clickaddbutton();
+        Thread.sleep(2000);
+        car.clickstatuslist();
+        Thread.sleep(2000);
+        car.clickstatuslistandchooseenabled();
+        Thread.sleep(2000);
+        car.clickfeatureslist();
+        Thread.sleep(2000);
+        car.writeyes();
+        Thread.sleep(2000);
+        car.clickfeatureslistandchooseyes();
+        Thread.sleep(2000);
+        car.enternameonnamefield("hundai");
+        Thread.sleep(2000);
+        car.clicksave();
+        Thread.sleep(2000);
+        Assert.assertEquals(car.returnvalueafteradd(),"hundai");
+        Thread.sleep(2000);
+    }
+    @Test
+    public void whenclickondeleteiconthethecarwilldeletefromapp() throws InterruptedException {
+        login.adminLogin();
+        Thread.sleep(2000);
+        car.clickcarsbutton();
+        Thread.sleep(2000);
+        car.clicksubbuttoncars();
+        Thread.sleep(2000);
+        car.clickondelteicon();
+        Thread.sleep(2000);
+        Assert.assertNotEquals(car.nameoftyotastrin,car.getnameoftyotaassert());
+    }
+    @Test
+    public void whenclickoneditbuttonthenclicksavecheakifthedatachangeonthelist() throws InterruptedException {
+        login.adminLogin();
+        Thread.sleep(2000);
+        car.clickcarsbutton();
+        Thread.sleep(2000);
+        car.clicksubbuttoncars();
+        Thread.sleep(2000);
+        car.clickonediticon();
+        Thread.sleep(2000);
+        car.clearnamefield();
+        Thread.sleep(2000);
+        car.enternameonnamefield("xg2003");
+        Thread.sleep(2000);
+        car.clicksave();
+        Thread.sleep(2000);
+        Assert.assertEquals("xg2003",car.getnameoffieldoafteredit());
+    }
+    @Test
+    public void whenclickonsearchbuttonandtypenameandcheakiftheresultapperonlsist() throws InterruptedException {
+        login.adminLogin();
+        Thread.sleep(2000);
+        car.clickcarsbutton();
+        Thread.sleep(2000);
+        car.clicksubbuttoncars();
+        Thread.sleep(2000);
+        car.clicksearchbutton();
+        Thread.sleep(2000);
+        car.fillsearchbar("opel C");
+        Thread.sleep(2000);
+        car.clickgo();
+        Thread.sleep(2000);
+        Assert.assertEquals(car.getnameofcar(),"Opel Corsa 2023");
+
+    }
+
 
 }

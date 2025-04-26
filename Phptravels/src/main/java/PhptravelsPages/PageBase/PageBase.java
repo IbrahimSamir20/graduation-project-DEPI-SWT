@@ -50,7 +50,7 @@ public class PageBase {
     public void scrolldown()
     {
         JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scrollBy(0,0)");
+        js.executeScript("window.scrollBy(0,1700)");
     }
     public  void scrollUp( int pixels) {
         JavascriptExecutor js = (JavascriptExecutor) driver;

@@ -31,11 +31,18 @@ public class Cars extends PageBase {
     By starslistnum2=By.xpath("(//li[@class=\"select2-results__option select2-results__option--selectable\"])[1]");
     By price=By.xpath("(//input[@class=\"xcrud-input form-control\"])[2]");
     By savebutton=By.xpath("//a[@class=\"xcrud-button xcrud-purple xcrud-action\"]");
+    By deleteicon=By.xpath("(//a[@class=\"xcrud-action xcrud-button xcrud-red\"])[1]");
+    By nameoftoyta=By.xpath("/html/body/main/section/div[2]/div/div/div[1]/div[2]/table/tbody/tr[1]/td[6]");
+    By editicon=By.xpath("(//a[@class=\"xcrud-action xcrud-button xcrud-orange\"])[1]");
+    By aftereditcheak=By.xpath("/html/body/main/section/div[2]/div/div/div[1]/div[2]/table/tbody/tr[1]/td[6]");
+    By addcheakstring=By.xpath("/html/body/main/section/div[2]/div/div/div[1]/div[2]/table/tbody/tr[1]/td[6]");
+    By searchbox=By.xpath("/html/body/main/section/div[2]/div/div/div[1]/div[3]/span/span/input");
+    By opelcar=By.xpath("/html/body/main/section/div[2]/div/div/div[1]/div[2]/table/tbody/tr/td[6]");
+    By clickgo=By.xpath("//a[@class=\"xcrud-action xcrud-button xcrud-green\"]");
     public String StringSuggestedcars="Cars Suggestions";
     public String Stringcars="Cars";
     public String cardeatailsonaddbutton="Car Details";
-
-
+    public String nameoftyotastrin="Toyota Camry 2023 full options";
 
     public void clickcarsbutton(){clickOnElement(carsbutton);}
     public void clicksubbuttoncars(){clickOnElement(subbuttoncars);}
@@ -58,10 +65,18 @@ public class Cars extends PageBase {
     public void choose2fromstarslist(){clickOnElement(starslistnum2);}
     public void fillprice(){sendKeys(price,"200000");}
     public void clicksave() throws InterruptedException {clickOnElement(savebutton);}
+    public void clickondelteicon(){clickOnElement(deleteicon);}
+    public void clickonediticon(){clickOnElement(editicon);}
+    public void clearnamefield(){driver.findElement(namefield).clear();}
+    public void clickgo(){clickOnElement(clickgo);}
+    public void fillsearchbar(String x){sendKeys(searchbox,x);}
+    public String getnameofcar(){return driver.findElement(opelcar).getText();}
+    public String returnvalueafteradd(){return driver.findElement(addcheakstring).getText();}
+    public String getnameoftyotaassert(){return driver.findElement(nameoftoyta).getText();}
     public String cheakwhenclickoncarsansugestedcarsandcarsbuttonswillshowen(){return driver.findElement(subbuttonsuggestedcars).getText();}
     public String cheakwhenclickonsubbuttoncarsapagewithcarswilldisplay(){return driver.findElement(carsheader).getText();}
     public String cheakwhenclickonaddbuttonadatatofillwilldisplaytoaddnewcar(){return driver.findElement(cardeatials).getText();}
-
+    public String getnameoffieldoafteredit(){return driver.findElement(aftereditcheak).getText();}
 
 
 
