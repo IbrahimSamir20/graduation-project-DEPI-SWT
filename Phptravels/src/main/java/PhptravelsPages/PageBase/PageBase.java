@@ -47,19 +47,16 @@ public class PageBase {
         Select oprions = new Select(driver.findElement(element));
         oprions.selectByVisibleText(option);
     }
-    public void scrolldown()
-    {
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scrollBy(0,1700)");
+/*******************************************/
+    public String getText(By element){
+        waiTimeToBeVisible(element);
+        return driver.findElement(element).getText();
     }
-    public  void scrollUp( int pixels) {
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scrollBy(0, -" + pixels + ")");
+    public boolean isAPPeared (By element){
+        if(driver.findElement(element).isDisplayed()){
+            return true;
+        }
+        return false;
     }
-
-    public  void scrollToTop() {
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scrollTo(0,0)");
-}
-
+/**************************************************/
 }
