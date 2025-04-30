@@ -43,4 +43,6 @@ public class PageBase {
         Select oprions = new Select(driver.findElement(element));
         oprions.selectByVisibleText(option);
     }
-}
+
+    }
+
