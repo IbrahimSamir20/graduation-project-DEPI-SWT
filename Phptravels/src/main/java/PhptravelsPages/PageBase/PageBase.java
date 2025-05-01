@@ -3,7 +3,9 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -57,6 +59,14 @@ public class PageBase {
             return true;
         }
         return false;
+    }
+    public void dragAndDropElement(By sourceLocator, By targetLocator) {
+        waiTimeToBeVisible(sourceLocator);
+        waiTimeToBeVisible(targetLocator);
+        WebElement source = driver.findElement(sourceLocator);
+        WebElement target = driver.findElement(targetLocator);
+        Actions actions = new Actions(driver);
+        actions.dragAndDrop(source, target).perform();
     }
 /**************************************************/
 }

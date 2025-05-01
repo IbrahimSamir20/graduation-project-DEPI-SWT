@@ -14,8 +14,8 @@ public class AdminTestBase {
         AdminDriver.get("https://phptravels.net/admin/login");
         System.out.println(AdminDriver.getTitle());
     }
-    @AfterMethod
-    public  void closeBrowser (){
-        AdminDriver.quit();
-    }
+//    @AfterMethod
+//    public  void closeBrowser (){
+//        AdminDriver.quit();
+//    }
 }
