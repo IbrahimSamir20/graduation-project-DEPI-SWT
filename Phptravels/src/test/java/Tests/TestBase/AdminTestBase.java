@@ -10,15 +10,12 @@ public class AdminTestBase {
     @BeforeMethod
     public void openBrowser () throws InterruptedException{
         WebDriverManager.chromedriver().setup();
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--no-sandbox");
-        options.addArguments("--disable-dev-shm-usage");
-        AdminDriver = new ChromeDriver(options);
+        AdminDriver = new ChromeDriver();
         AdminDriver.get("https://phptravels.net/admin/login");
         System.out.println(AdminDriver.getTitle());
     }
-    @AfterMethod
-    public  void closeBrowser (){
-        AdminDriver.quit();
-    }
+//    @AfterMethod
+//    public  void closeBrowser (){
+//        AdminDriver.quit();
+//    }
 }

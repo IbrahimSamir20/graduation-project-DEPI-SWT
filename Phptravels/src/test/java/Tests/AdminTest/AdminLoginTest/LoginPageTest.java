@@ -5,10 +5,16 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 public class LoginPageTest extends MainPageTestBase {
     AdminLoginPage login;
+
     @BeforeMethod
     public void init(){
         login = new AdminLoginPage(driver);
     }
     @Test
-    public void ooo(){}
+    public void ooo(){
+
+    }
+
+
+
 }
