@@ -3,7 +3,8 @@ import PhptravelsPages.PageBase.PageBase;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 public class UsersRolesPage extends PageBase {
-    By SortTypeName = By.xpath("//*[@class=\"xcrud-column xcrud-action xcrud-current xcrud-asc\"]");
+    By SortTypeNameAsc = By.xpath("//*[@class=\"xcrud-column xcrud-action\"]");
+    By SortTypeNameDesc = By.xpath("//*[@class=\"xcrud-column xcrud-action xcrud-current xcrud-desc\"]");
     By SearchButton = By.xpath("//*[@class=\"xcrud-search-toggle xcrud-button xcrud-cyan\"]");
     By DeleteButton = By.xpath("(//*[@class=\"xcrud-action xcrud-button xcrud-red\"])[1]");
     By EditButton = By.xpath("(//*[@class=\"xcrud-button\"])[1]");
@@ -27,8 +28,13 @@ public class UsersRolesPage extends PageBase {
     public void deleteButton (){
         clickOnElement(DeleteButton);
     }
-    public void sortByTypeName (){
-        clickOnElement(SortTypeName);
+    public void sortByTypeNameAsc (){
+        clickOnElement(SortTypeNameAsc);
+    }
+    public void sortByTypeNameDesc () throws InterruptedException {
+        clickOnElement(SortTypeNameAsc);
+        Thread.sleep(2000);
+        clickOnElement(SortTypeNameDesc);
     }
     public void display25itemsButton (){
         clickOnElement(Display25itemsButton);
