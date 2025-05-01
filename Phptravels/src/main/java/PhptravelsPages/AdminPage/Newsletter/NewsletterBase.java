@@ -18,10 +18,56 @@ public class NewsletterBase extends PageBase {
     By goButton=By.xpath("//*[@class=\"xcrud-action xcrud-button xcrud-green\"]");
     By exportIntoCSVButton=By.xpath("//*[@class=\"xcrud-button xcrud-purple xcrud-in-new-window xcrud-action\"]");
     By addButton=By.xpath("//*[@class=\"xcrud-button xcrud-green xcrud-action\"]");
-    String newsletter="Newsletter";
+    By resetButton=By.xpath("//*[@class=\"xcrud-action xcrud-button xcrud-red\"]");
+    public String newsletter="Newsletter";
     public NewsletterBase(WebDriver driver) {
         super(driver);
     }
     
+    public void SelectRange(String selectRange){
+        selectDropDown(this.selectRange,selectRange);
+    }
+    public void FillPhrase(String phrase){
+        sendKeys(this.phrase,phrase);
+    }
+    public void SelectField(String selectField){
+        selectDropDown(this.selectField,selectField);
+    }
+    public void clickonNewsletterTab(){
+        clickOnElement(newsletterTab);
+    }
+    public void clickonExportIntoCSVButton(){
+        clickOnElement(exportIntoCSVButton);
+    }
+    public void clickonButton25(){
+        clickOnElement(button25);
+    }
+    public void clickonButton50(){
+        clickOnElement(button50);
+    }
+    public void clickonButton100(){
+        clickOnElement(button100);
+    }
+    public void clickonButtonAll(){
+        clickOnElement(buttonAll);
+    }
+    public void clickonSearchButton(){
+        clickOnElement(searchButton);
+    }
+    public void clickonGoButton(){
+        clickOnElement(goButton);
+    }
+    
+    public void clickonAddButton(){
+        clickOnElement(addButton);
+    }
+    
+    public void clickonResetButton(){
+        clickOnElement(resetButton);
+    }
+    
+    public String getHeader(){
+        return getText(pageTitle);
+    }
     
 }
