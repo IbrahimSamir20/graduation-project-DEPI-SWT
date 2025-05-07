@@ -18,6 +18,19 @@ public class CountriesBasePage extends PageBase{
     By Display50itemsButton = By.xpath("(//*[@class=\"xcrud-button xcrud-action\"])[1]");
     By Display100itemsButton = By.xpath("(//*[@class=\"xcrud-button xcrud-action\"])[2]");
     By DisplayAllItemsButton = By.xpath("(//*[@class=\"xcrud-button xcrud-action\"])[3]");
+    public By SearchTextField = By.xpath("//*[@class=\"xcrud-searchdata xcrud-search-active xcrud-input-small\"]");
+    public By Zimbabwe = By.xpath("//*[@class=\"flag zimbabwe\"]");
+    public By Andorra = By.xpath("//*[@class=\"flag andorra\"]");
+    public By Afghanistan = By.xpath("//*[@class=\"flag afghanistan\"]");
+    public By UnitedStates = By.xpath("//*[@class=\"flag united states minor \"]");
+    public By BruneiDarussalam = By.xpath("//*[@class=\"flag brunei darussalam\"]");
+    public By Uzbekistan = By.xpath("//*[@class=\"flag uzbekistan\"]");
+    public By SouthGeorgia = By.xpath("//*[@class=\"flag south georgia and th\"]");
+    public By Pitcairn = By.xpath("//*[@class=\"flag pitcairn\"]");
+    public By India = By.xpath("//*[@class=\"flag india\"]");
+    public By Num50 = By.xpath("(//*[@class=\"xcrud-current xcrud-num\"])[50]");
+    public By Num100 = By.xpath("(//*[@class=\"xcrud-current xcrud-num\"])[100]");
+    public By All = By.xpath("(//*[@class=\"xcrud-current xcrud-num\"])[252]");
     public CountriesBasePage(WebDriver driver) {
         super(driver);
     }
