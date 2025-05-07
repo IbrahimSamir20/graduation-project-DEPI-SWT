@@ -1,22 +1,10 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package PhptravelsPages.MasterPage;
-
 import PhptravelsPages.PageBase.PageBase;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.time.Duration;
-
-/**
- *
- * @author Basmala
- */
 public class FlightTabPage extends PageBase{
      By typeFly=By.id("flight_type");
     By flightWay=By.xpath("//*[@class=\"flight_way form-select form-select-sm px-3 rounded-2 border\"]");
@@ -28,8 +16,8 @@ public class FlightTabPage extends PageBase{
     By travellersNumber=By.xpath("class=\"dropdown-toggle dropdown-btn travellers waves-effect\"");
     By travellersAdultsDecreaseNumber=By.xpath("(//*[@class=\"qtyDec\"])[1]");
     By travellersAdultsIncreaseNumber=By.xpath("(//*[@class=\"qtyInc\"])[1]");
-    By travellersChildsDecreaseNumber=By.xpath("(//*[@class=\"qtyDec\"])[2]");
-    By travellersChildsIncreaseNumber=By.xpath("(//*[@class=\"qtyInc\"])[2]");
+    By travellersChildDecreaseNumber=By.xpath("(//*[@class=\"qtyDec\"])[2]");
+    By travellersChildIncreaseNumber=By.xpath("(//*[@class=\"qtyInc\"])[2]");
     By travellersInfantsDecreaseNumber=By.xpath("(//*[@class=\"qtyDec\"])[3]");
     By travellersInfantsIncreaseNumber=By.xpath("(//*[@class=\"qtyInc\"])[3]");
     By searchButton=By.xpath("flights-search");
@@ -46,10 +34,9 @@ public class FlightTabPage extends PageBase{
     public void FillDepartDate(String departDate){
         sendKeys(this.departDate,departDate);
     }
-    public void FillReturnDate(String returnDate){
+    /**public void FillReturnDate(String returnDate){
         sendKeys(this.returnDate,returnDate);
-    }
-    
+    }*/
     public void clickOnTravellersAdultsDecreaseButton (){
         clickOnElement(travellersAdultsDecreaseNumber);
     }
@@ -59,11 +46,11 @@ public class FlightTabPage extends PageBase{
     public void clickOnTravellersAdultsIncreaseButton (){
         clickOnElement(travellersAdultsIncreaseNumber);
     }
-    public void clickOnTravellersChildsDecreaseButton (){
-        clickOnElement(travellersChildsDecreaseNumber);
+    public void clickOnTravellersChildDecreaseButton (){
+        clickOnElement(travellersChildDecreaseNumber);
     }
-    public void clickOnTravellersChildsIncreaseButton (){
-        clickOnElement(travellersChildsIncreaseNumber);
+    public void clickOnTravellersChildIncreaseButton (){
+        clickOnElement(travellersChildIncreaseNumber);
     }
     public void clickOnTravellersInfantsDecreaseButton (){
         clickOnElement(travellersInfantsDecreaseNumber);
@@ -93,7 +80,7 @@ public class FlightTabPage extends PageBase{
     }
     public void alertTest(){
 //        WebDriverWait wait = new WebDriverWait(driver,5);
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        WebDriverWait wait = new WebDriverWait(driver, 5);
         wait.until(ExpectedConditions.alertIsPresent());
         Alert alert = driver.switchTo().alert();
         String alertText = alert.getText();

@@ -20,7 +20,7 @@ public class TransferCarTest extends MainPageTestBase {
         Thread.sleep(2000);
     }
     @Test
-    public void SearchCarsWithEnterFromandtolocation () throws InterruptedException {
+    public void SearchCarsWithEnterFromAndToLocation () throws InterruptedException {
         Thread.sleep(2000);
         transferCars.clickCarsButton();
         Thread.sleep(2000);

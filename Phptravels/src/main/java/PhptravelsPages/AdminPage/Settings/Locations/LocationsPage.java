@@ -13,10 +13,10 @@ public class LocationsPage extends PageBase {
     By SearchButton = By.xpath("//*[@class=\"xcrud-search-toggle xcrud-button xcrud-cyan\"]");
     By DeleteButton = By.xpath("(//*[@class=\"xcrud-action xcrud-button xcrud-red\"])[1]");
     By EditButton = By.xpath("(//*[@class=\"xcrud-action xcrud-button xcrud-orange\"])[1]");
-    By Display25itemsButton = By.xpath("(//*[@class=\"xcrud-button active xcrud-action\"])");
     By Display50itemsButton = By.xpath("(//*[@class=\"xcrud-button xcrud-action\"])[1]");
     By Display100itemsButton = By.xpath("(//*[@class=\"xcrud-button xcrud-action\"])[2]");
     By DisplayAllItemsButton = By.xpath("(//*[@class=\"xcrud-button xcrud-action\"])[3]");
+    By SortByAec = By.xpath("//*[@class=\"xcrud-column xcrud-action xcrud-current xcrud-desc\"]");
     By GoToNextPage=By.xpath("(//*[@class=\"xcrud-action\"])[1]");
     public LocationsPage(WebDriver driver) {
         super(driver);
@@ -51,9 +51,6 @@ public class LocationsPage extends PageBase {
     public void sortByCountryButton (){
         clickOnElement(SortCountryButton);
     }
-    public void display25itemsButton (){
-        clickOnElement(Display25itemsButton);
-    }
     public void display50itemsButton (){
         clickOnElement(Display50itemsButton);
     }
@@ -65,6 +62,9 @@ public class LocationsPage extends PageBase {
     }
     public void goToNextPage (){
         clickOnElement(GoToNextPage);
+    }
+    public void sortByAec (){
+        clickOnElement(SortByAec);
     }
 
 }

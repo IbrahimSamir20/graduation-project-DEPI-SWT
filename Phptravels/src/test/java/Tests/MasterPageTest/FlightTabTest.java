@@ -1,20 +1,10 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Tests.MasterPageTest;
-
 import PhptravelsPages.MasterPage.FlightTabPage;
 import PhptravelsPages.MasterPage.ResultPage;
 import Tests.TestBase.MainPageTestBase;
 import org.openqa.selenium.NoSuchElementException;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
-/*s*
- *
- * @author Basmala
- */
 public class FlightTabTest extends MainPageTestBase{
     FlightTabPage flightTabPage;
     ResultPage resultPage;
@@ -134,7 +124,7 @@ public class FlightTabTest extends MainPageTestBase{
         flightTabPage.clickOnTravellersAdultsIncreaseButton();
         flightTabPage.clickOnTravellersAdultsIncreaseButton();
         flightTabPage.clickOnTravellersAdultsIncreaseButton();
-        flightTabPage.clickOnTravellersChildsIncreaseButton();
+        flightTabPage.clickOnTravellersChildIncreaseButton();
         flightTabPage.clickOnTravellersInfantsIncreaseButton();
         Thread.sleep(2000);
         enterFlyingFromAndDestinationTo();
@@ -155,7 +145,7 @@ public class FlightTabTest extends MainPageTestBase{
         flightTabPage.clickOnTravellersButton();
         Thread.sleep(2000);
         flightTabPage.clickOnTravellersAdultsDecreaseButton();
-        flightTabPage.clickOnTravellersChildsDecreaseButton();
+        flightTabPage.clickOnTravellersChildDecreaseButton();
         flightTabPage.clickOnTravellersInfantsDecreaseButton();
         Thread.sleep(2000); 
         try {
