@@ -24,7 +24,6 @@ public class AlertsTest extends AdminTestBase {
         login.adminLogin();
         Thread.sleep(5000);
         alert.displayAlerts();
-        Thread.sleep(2000);
         alert.deleteAlert();
     }
 }

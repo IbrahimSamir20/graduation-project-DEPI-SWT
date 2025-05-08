@@ -3,7 +3,7 @@ import PhptravelsPages.PageBase.PageBase;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 public class BookingsBase extends PageBase {
-    By BookingButton = By.xpath("//*[@class=\"loadeffect text-start btn btn-outline-light btn-toggle collapsed w-100 gap-3 active\"]");
+    By BookingButton = By.xpath("(//*[@class=\"mb-0\"])[1]");
     By BookingId = By.xpath("//*[@class=\"form-control booking_id\"]");
     By ModuleType = By.xpath("//*[@class=\"form-select module\"]");
     By BookingStatus =By.xpath("//*[@class=\"form-select booking_status\"]");
