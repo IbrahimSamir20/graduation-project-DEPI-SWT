@@ -15,4 +15,8 @@ public class AssertionHelper extends AdminTestBase {
         boolean isPresent = AdminDriver.findElements(locator).size() > 0;
         Assert.assertTrue(isPresent, "Expected element not found: " + locator.toString());
     }
+    public void assertElementIsNotVisible(By locator) {
+        boolean isPresent = AdminDriver.findElements(locator).size() > 0;
+        Assert.assertFalse(isPresent, "Element was found but should not be: " + locator.toString());
+    }
 }
