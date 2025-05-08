@@ -15,64 +15,38 @@ public class TransferCarTest extends MainPageTestBase {
     public void SearchCarsWithoutEnterDataInfo () throws InterruptedException {
         Thread.sleep(2000);
         transferCars.clickCarsButton();
-        Thread.sleep(2000);
         transferCars.ClickSearshButton();
-        Thread.sleep(2000);
     }
     @Test
     public void SearchCarsWithEnterFromAndToLocation () throws InterruptedException {
-        Thread.sleep(2000);
         transferCars.clickCarsButton();
-        Thread.sleep(2000);
-        //transferCars.FillFromAirport("Dubai");
         transferCars.FromAirport();
-        Thread.sleep(2000);
         transferCars.SelectFromAirport();
-        Thread.sleep(2000);
         transferCars.ToLocation("London");
-        Thread.sleep(2000);
         transferCars.selectOnToLocation();
-        Thread.sleep(2000);
         transferCars.ClickSearshButton();
-        Thread.sleep(2000);
     }
     @Test
-    public void SearchCarsWithdSelectFromandToDate () throws InterruptedException {
-        Thread.sleep(2000);
+    public void SearchCarsWithSelectFromAndToDate () throws InterruptedException {
         transferCars.clickCarsButton();
-        Thread.sleep(2000);
         transferCars.OpenPickUpCale();
-        Thread.sleep(2000);
         transferCars.ClickPickNext();
-        Thread.sleep(2000);
         transferCars.SelectPickDay();
-        Thread.sleep(2000);
         transferCars.openDropCale();
-        Thread.sleep(2000);
         transferCars.ClickDropNext();
-        Thread.sleep(2000);
         transferCars.SelectDropDay();
     }
     @Test
-    public void SearchCarsWithSelectFromandToTime() throws InterruptedException {
-        Thread.sleep(2000);
+    public void SearchCarsWithSelectFromAndToTime() throws InterruptedException {
         transferCars.clickCarsButton();
-        Thread.sleep(2000);
         transferCars.FillPickUpTime("10:30");
-        Thread.sleep(200);
         transferCars.FillDropOfTime("11:30");
-        Thread.sleep(2000);
    }
     @Test
-    public void SearchCarsWithSelectNumofTravelers () throws InterruptedException {
-        Thread.sleep(2000);
+    public void SearchCarsWithSelectNumOfTravelers () throws InterruptedException {
         transferCars.clickCarsButton();
-        Thread.sleep(2000);
         transferCars.ClickNumOfTravelersButton();
-        Thread.sleep(2000);
         transferCars.FillNumOfAdults("6");
-        Thread.sleep(2000);
         transferCars.FillNumOfChilds("2");
-        Thread.sleep(2000);
     }
 }

@@ -21,7 +21,6 @@ public class PaymentMethodSettingsPageTest extends AdminTestBase {
        settings.GoToPaymentGateways();
        Thread.sleep(2000);
        paymentGateways.goToSettings();
-       Thread.sleep(2000);
        paymentSetting.credentials1("Account holder Omar Talaat");
     }
     @Test
@@ -29,7 +28,6 @@ public class PaymentMethodSettingsPageTest extends AdminTestBase {
         settings.GoToPaymentGateways();
         Thread.sleep(2000);
         paymentGateways.goToSettings();
-        Thread.sleep(2000);
         paymentSetting.devModeDropList("Production");
     }
     @Test
@@ -37,7 +35,6 @@ public class PaymentMethodSettingsPageTest extends AdminTestBase {
         settings.GoToPaymentGateways();
         Thread.sleep(2000);
         paymentGateways.goToSettings();
-        Thread.sleep(2000);
         paymentSetting.currencyDropList("USD");
     }
     @Test
@@ -45,7 +42,6 @@ public class PaymentMethodSettingsPageTest extends AdminTestBase {
         settings.GoToPaymentGateways();
         Thread.sleep(2000);
         paymentGateways.goToSettings();
-        Thread.sleep(2000);
         paymentSetting.submitButton();
     }
     @Test
@@ -53,7 +49,6 @@ public class PaymentMethodSettingsPageTest extends AdminTestBase {
         settings.GoToPaymentGateways();
         Thread.sleep(2000);
         paymentGateways.goToSettings();
-        Thread.sleep(2000);
         paymentSetting.credentials1("Account holder Omar Talaat");
         paymentSetting.credentials4("AlexAndria");
         paymentSetting.devModeDropList("Production");

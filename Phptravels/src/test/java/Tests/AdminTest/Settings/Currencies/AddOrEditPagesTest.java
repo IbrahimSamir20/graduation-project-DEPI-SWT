@@ -22,9 +22,7 @@ public class AddOrEditPagesTest extends AdminTestBase {
         currencies.addButton();
         Thread.sleep(2000);
         test.fillStatusDropList("Enabled");
-        Thread.sleep(2000);
         test.saveButton();
-        Thread.sleep(5000);
     }
     @Test
     public void VerifyFunctionalityOfAddNewCurrenciesBySendName() throws InterruptedException {
@@ -33,9 +31,7 @@ public class AddOrEditPagesTest extends AdminTestBase {
         currencies.addButton();
         Thread.sleep(2000);
         test.name("EGY");
-        Thread.sleep(2000);
         test.saveButton();
-        Thread.sleep(5000);
     }
     @Test
     public void VerifyFunctionalityOfAddNewCurrenciesBySendCountryOption() throws InterruptedException {
@@ -44,9 +40,7 @@ public class AddOrEditPagesTest extends AdminTestBase {
         currencies.addButton();
         Thread.sleep(2000);
         test.fillCountryTextField("Egypt");
-        Thread.sleep(2000);
         test.saveButton();
-        Thread.sleep(5000);
     }
     @Test
     public void VerifyFunctionalityOfAddNewCurrenciesBySendRate() throws InterruptedException {
@@ -55,25 +49,19 @@ public class AddOrEditPagesTest extends AdminTestBase {
         currencies.addButton();
         Thread.sleep(2000);
         test.rate("4.5");
-        Thread.sleep(2000);
         test.saveButton();
-        Thread.sleep(5000);
-    }@Test
+    }
+    @Test//Asserting this
     public void VerifyFunctionalityOfAddNewCurrenciesByFillRequirements() throws InterruptedException {
         settings.GoToCurrencies();
         Thread.sleep(2000);
         currencies.addButton();
         Thread.sleep(2000);
         test.fillStatusDropList("Enabled");
-        Thread.sleep(2000);
         test.name("EGY");
-        Thread.sleep(2000);
         test.fillCountryTextField("Egypt");
-        Thread.sleep(2000);
         test.rate("4.5");
-        Thread.sleep(2000);
         test.saveButton();
-        Thread.sleep(5000);
     }
     @Test
     public void VerifyFunctionalityOfReturnButton() throws InterruptedException {
@@ -82,7 +70,6 @@ public class AddOrEditPagesTest extends AdminTestBase {
         currencies.addButton();
         Thread.sleep(2000);
         test.returnButton();
-        Thread.sleep(5000);
     }
     @Test
     public void VerifyFunctionalityOfEditStatusButtonFromEditPage () throws InterruptedException{
@@ -91,9 +78,7 @@ public class AddOrEditPagesTest extends AdminTestBase {
         currencies.editButton();
         Thread.sleep(2000);
         test.fillStatusDropList("Enabled");
-        Thread.sleep(2000);
         test.saveButton();
-        Thread.sleep(5000);
     }
     @Test
     public void VerifyFunctionalityOfEditNameButtonFromEditPage () throws InterruptedException{
@@ -102,9 +87,7 @@ public class AddOrEditPagesTest extends AdminTestBase {
         currencies.editButton();
         Thread.sleep(2000);
         test.name("USA");
-        Thread.sleep(2000);
         test.saveButton();
-        Thread.sleep(5000);
     }
     @Test
     public void VerifyFunctionalityOfEditCountryFromEditPage () throws InterruptedException{
@@ -113,9 +96,7 @@ public class AddOrEditPagesTest extends AdminTestBase {
         currencies.editButton();
         Thread.sleep(2000);
         test.fillCountryTextField("United States");
-        Thread.sleep(2000);
         test.saveButton();
-        Thread.sleep(5000);
     }
     @Test
     public void VerifyFunctionalityOfEditRateFromEditPage () throws InterruptedException{
@@ -124,25 +105,18 @@ public class AddOrEditPagesTest extends AdminTestBase {
         currencies.editButton();
         Thread.sleep(2000);
         test.rate("0.88");
-        Thread.sleep(2000);
         test.saveButton();
-        Thread.sleep(5000);
     }
-    @Test
+    @Test//Asserting this
     public void VerifyFunctionalityOfEditCurrenciesByFillRequirements() throws InterruptedException {
         settings.GoToCurrencies();
         Thread.sleep(2000);
         currencies.editButton();
         Thread.sleep(2000);
         test.fillStatusDropList("Enabled");
-        Thread.sleep(2000);
         test.name("EGY");
-        Thread.sleep(2000);
         test.fillCountryTextField("Egypt");
-        Thread.sleep(2000);
         test.rate("4.5");
-        Thread.sleep(2000);
         test.saveButton();
-        Thread.sleep(5000);
     }
 }

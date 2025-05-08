@@ -16,7 +16,7 @@ public class CarsTest extends AdminTestBase {
                 login=new AdminLoginHelper();
     }
     @Test
-    public void CheakWhenClickOnCarsCarsOptionsShowen() throws InterruptedException {
+    public void CheckWhenClickOnCarsCarsOptionsShown() throws InterruptedException {
        login.adminLogin();
        Thread.sleep(2000);
         car.clickcarsbutton();
@@ -71,8 +71,6 @@ public class CarsTest extends AdminTestBase {
         Thread.sleep(2000);
         car.clickremove();
         Thread.sleep(2000);
-//        car.clickaddphoto();
-//        Thread.sleep(2000);
         car.clickcurrency();
         Thread.sleep(2000);
         car.clickoncurrencyfield();
@@ -87,7 +85,6 @@ public class CarsTest extends AdminTestBase {
         Thread.sleep(2000);
         car.clicksave();
         Thread.sleep(3000);
-        //not complete waiting for scroll up fuction
     }
     @Test
     public void whenclickaddandfilldatathenclicksaveacaryouaddshoulddisplayoncarswiththesamedataedited() throws InterruptedException {

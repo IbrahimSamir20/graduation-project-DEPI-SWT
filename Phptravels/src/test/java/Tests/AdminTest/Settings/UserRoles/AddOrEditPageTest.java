@@ -24,7 +24,6 @@ public class AddOrEditPageTest extends AdminTestBase {
         roles.addButton();
         Thread.sleep(2000);
         test.roleName("Omar Talaat");
-        Thread.sleep(2000);
         test.submit();
         Thread.sleep(5000);
     }
@@ -36,9 +35,7 @@ public class AddOrEditPageTest extends AdminTestBase {
         roles.addButton();
         Thread.sleep(2000);
         test.permission();
-        Thread.sleep(2000);
         test.submit();
-        Thread.sleep(5000);
     }
 
     @Test
@@ -48,9 +45,7 @@ public class AddOrEditPageTest extends AdminTestBase {
         roles.editButton();
         Thread.sleep(2000);
         test.roleName("Mahmoud");
-        Thread.sleep(2000);
         test.submit();
-        Thread.sleep(5000);
     }
 
     @Test
@@ -60,8 +55,6 @@ public class AddOrEditPageTest extends AdminTestBase {
         roles.editButton();
         Thread.sleep(2000);
         test.selectAll();
-        Thread.sleep(2000);
         test.submit();
-        Thread.sleep(5000);
     }
 }
