@@ -1,5 +1,6 @@
 package Tests.AdminTest.Settings.Countries;
 import Helper.AdminSettingsHelper;
+import Helper.AssertionHelper;
 import PhptravelsPages.AdminPage.Settings.Countries.AddOrEditCountriesPageBase;
 import PhptravelsPages.AdminPage.Settings.Countries.CountriesBasePage;
 import Tests.TestBase.AdminTestBase;
@@ -7,11 +8,13 @@ import org.openqa.selenium.By;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 public class CountriesPageTest extends AdminTestBase{
+    AssertionHelper Assert;
     AdminSettingsHelper settings;
     CountriesBasePage countries;
     AddOrEditCountriesPageBase addOrEditPage ;
     @BeforeMethod
     public void init() {
+        Assert = new AssertionHelper();
         countries = new CountriesBasePage(AdminDriver);
         settings = new AdminSettingsHelper();
     }
@@ -20,7 +23,7 @@ public class CountriesPageTest extends AdminTestBase{
         settings.GoToCountries();
         Thread.sleep(2000);
         countries.sortIso();
-        settings.assertElementIsVisible(countries.Zimbabwe);
+        Assert.assertElementIsVisible(countries.Zimbabwe);
     }
     @Test
     public void  VerifyFunctionalityOfSortingCountriesByIsoAsc() throws InterruptedException {
@@ -28,14 +31,14 @@ public class CountriesPageTest extends AdminTestBase{
         Thread.sleep(2000);
         countries.sortIso();
         countries.sortAsc();
-        settings.assertElementIsVisible(countries.Andorra);
+        Assert.assertElementIsVisible(countries.Andorra);
     }
     @Test
     public void  VerifyFunctionalityOfSortingCountriesByNiceNameDesc() throws InterruptedException {
         settings.GoToCountries();
         Thread.sleep(2000);
         countries.sortNiceName();
-        settings.assertElementIsVisible(countries.Zimbabwe);
+        Assert.assertElementIsVisible(countries.Zimbabwe);
     }
     @Test
     public void  VerifyFunctionalityOfSortingCountriesByNiceNameAsc() throws InterruptedException {
@@ -43,14 +46,14 @@ public class CountriesPageTest extends AdminTestBase{
         Thread.sleep(2000);
         countries.sortNiceName();
         countries.sortAsc();
-        settings.assertElementIsVisible(countries.Afghanistan);
+        Assert.assertElementIsVisible(countries.Afghanistan);
     }
     @Test
     public void  VerifyFunctionalityOfSortingCountriesByIso3Desc() throws InterruptedException {
         settings.GoToCountries();
         Thread.sleep(2000);
         countries.sortIso3();
-        settings.assertElementIsVisible(countries.Zimbabwe);
+        Assert.assertElementIsVisible(countries.Zimbabwe);
     }
     @Test
     public void  VerifyFunctionalityOfSortingCountriesByIso3Asc() throws InterruptedException {
@@ -58,14 +61,14 @@ public class CountriesPageTest extends AdminTestBase{
         Thread.sleep(2000);
         countries.sortIso3();
         countries.sortAsc();
-        settings.assertElementIsVisible(countries.UnitedStates);
+        Assert.assertElementIsVisible(countries.UnitedStates);
     }
     @Test
     public void  VerifyFunctionalityOfSortingCountriesByNumCodeDesc() throws InterruptedException {
         settings.GoToCountries();
         Thread.sleep(2000);
         countries.sortNumCode();
-        settings.assertElementIsVisible(countries.BruneiDarussalam);
+        Assert.assertElementIsVisible(countries.BruneiDarussalam);
     }
     @Test
     public void  VerifyFunctionalityOfSortingCountriesByNumCodeAsc() throws InterruptedException {
@@ -73,14 +76,14 @@ public class CountriesPageTest extends AdminTestBase{
         Thread.sleep(2000);
         countries.sortNumCode();
         countries.sortAsc();
-        settings.assertElementIsVisible(countries.SouthGeorgia);
+        Assert.assertElementIsVisible(countries.SouthGeorgia);
     }
     @Test
     public void  VerifyFunctionalityOfSortingCountriesByPhoneCodeDesc() throws InterruptedException {
         settings.GoToCountries();
         Thread.sleep(2000);
         countries.sortPhoneCode();
-        settings.assertElementIsVisible(countries.Uzbekistan);
+        Assert.assertElementIsVisible(countries.Uzbekistan);
     }
     @Test
     public void  VerifyFunctionalityOfSortingCountriesByPhoneCodeAsc() throws InterruptedException {
@@ -88,14 +91,14 @@ public class CountriesPageTest extends AdminTestBase{
         Thread.sleep(2000);
         countries.sortPhoneCode();
         countries.sortAsc();
-        settings.assertElementIsVisible(countries.Pitcairn);
+        Assert.assertElementIsVisible(countries.Pitcairn);
     }
     @Test
     public void  VerifyFunctionalityOfSortingCountriesByCountryStatusDesc() throws InterruptedException {
         settings.GoToCountries();
         Thread.sleep(2000);
         countries.sortCountryStatus();
-        settings.assertElementIsVisible(countries.Pitcairn);
+        Assert.assertElementIsVisible(countries.Pitcairn);
     }
     @Test
     public void  VerifyFunctionalityOfSortingCountriesByCountryStatusAsc() throws InterruptedException {
@@ -103,14 +106,14 @@ public class CountriesPageTest extends AdminTestBase{
         Thread.sleep(2000);
         countries.sortCountryStatus();
         countries.sortAsc();
-        settings.assertElementIsVisible(countries.Pitcairn);
+        Assert.assertElementIsVisible(countries.Pitcairn);
     }
     @Test
     public void  VerifyFunctionalityOfSortingCountriesByTrafficDesc() throws InterruptedException {
         settings.GoToCountries();
         Thread.sleep(2000);
         countries.sortTraffic();
-        settings.assertElementIsVisible(countries.India);
+        Assert.assertElementIsVisible(countries.India);
     }
     @Test
     public void  VerifyFunctionalityOfSortingCountriesByTrafficAsc() throws InterruptedException {
@@ -118,7 +121,7 @@ public class CountriesPageTest extends AdminTestBase{
         Thread.sleep(2000);
         countries.sortTraffic();
         countries.sortAsc();
-        settings.assertElementIsVisible(countries.Pitcairn);
+        Assert.assertElementIsVisible(countries.Pitcairn);
     }
     @Test
     public void  VerifyFunctionalityOfDeleteButton() throws InterruptedException {
@@ -131,14 +134,14 @@ public class CountriesPageTest extends AdminTestBase{
         settings.GoToCountries();
         Thread.sleep(2000);
         countries.searchButton();
-        settings.assertElementIsVisible(countries.SearchTextField);
+        Assert.assertElementIsVisible(countries.SearchTextField);
     }
     @Test
     public void  VerifyFunctionalityOfAddButton() throws InterruptedException {
         settings.GoToCountries();
         Thread.sleep(2000);
         countries.addButton();
-        settings.assertElementIsVisible(addOrEditPage.Name);
+        Assert.assertElementIsVisible(addOrEditPage.Name);
 
     }
     @Test
@@ -146,27 +149,27 @@ public class CountriesPageTest extends AdminTestBase{
         settings.GoToCountries();
         Thread.sleep(2000);
         countries.editButton();
-        settings.assertElementIsVisible(addOrEditPage.Name);
+        Assert.assertElementIsVisible(addOrEditPage.Name);
     }
     @Test
     public void  VerifyFunctionalityOfDisplay50ItemsInThePage() throws InterruptedException {
         settings.GoToCountries();
         Thread.sleep(2000);
         countries.display50itemsButton();
-        settings.assertElementIsVisible(countries.Num50);
+        Assert.assertElementIsVisible(countries.Num50);
     }
     @Test
     public void  VerifyFunctionalityOfDisplay100ItemsInThePage() throws InterruptedException {
         settings.GoToCountries();
         Thread.sleep(2000);
         countries.display100itemsButton();
-        settings.assertElementIsVisible(countries.Num100);
+        Assert.assertElementIsVisible(countries.Num100);
     }
     @Test
     public void  VerifyFunctionalityOfDisplayAllItemsInThePage() throws InterruptedException {
         settings.GoToCountries();
         Thread.sleep(2000);
         countries.displayAllItemsButton();
-        settings.assertElementIsVisible(countries.All);
+        Assert.assertElementIsVisible(countries.All);
     }
 }
