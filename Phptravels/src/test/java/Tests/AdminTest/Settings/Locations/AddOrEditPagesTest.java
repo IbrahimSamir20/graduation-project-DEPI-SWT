@@ -23,7 +23,6 @@ public class AddOrEditPagesTest extends AdminTestBase {
         location.addButton();
         Thread.sleep(2000);
         test.fillStatusDropList("");
-        Thread.sleep(2000);
     }
     @Test
     public void VerifyFunctionalityOfAddNewLocationByFillCity() throws InterruptedException {
@@ -32,7 +31,6 @@ public class AddOrEditPagesTest extends AdminTestBase {
         location.addButton();
         Thread.sleep(2000);
         test.fillCity("");
-        Thread.sleep(2000);
     }
     @Test
     public void VerifyFunctionalityOfAddNewLocationByFillCountry() throws InterruptedException {
@@ -41,7 +39,6 @@ public class AddOrEditPagesTest extends AdminTestBase {
         location.addButton();
         Thread.sleep(2000);
         test.fillCountryDropList("");
-        Thread.sleep(2000);
     }
     @Test
     public void VerifyFunctionalityOfAddNewLocationByFillLatitude () throws InterruptedException {
@@ -50,7 +47,6 @@ public class AddOrEditPagesTest extends AdminTestBase {
         location.addButton();
         Thread.sleep(2000);
         test.fillLatitude("");
-        Thread.sleep(2000);
     }
     @Test
     public void VerifyFunctionalityOfAddNewLocationByFillLongitude() throws InterruptedException {
@@ -59,7 +55,6 @@ public class AddOrEditPagesTest extends AdminTestBase {
         location.addButton();
         Thread.sleep(2000);
         test.fillLongitude("");
-        Thread.sleep(2000);
     }
     @Test
     public void VerifyFunctionalityOfEditLocationByFillCity() throws InterruptedException {
@@ -68,7 +63,6 @@ public class AddOrEditPagesTest extends AdminTestBase {
         location.editButton();
         Thread.sleep(2000);
         test.fillStatusDropList("");
-        Thread.sleep(2000);
     }
     @Test
     public void VerifyFunctionalityOfEditLocationByFillStatus() throws InterruptedException {
@@ -77,7 +71,6 @@ public class AddOrEditPagesTest extends AdminTestBase {
         location.editButton();
         Thread.sleep(2000);
         test.fillStatusDropList("");
-        Thread.sleep(2000);
     }
     @Test
     public void VerifyFunctionalityOfEditNewLocationByFillCountry() throws InterruptedException {
@@ -86,7 +79,6 @@ public class AddOrEditPagesTest extends AdminTestBase {
         location.editButton();
         Thread.sleep(2000);
         test.fillCountryDropList("");
-        Thread.sleep(2000);
     }
     @Test
     public void VerifyFunctionalityOfEditNewLocationByFillLatitude() throws InterruptedException {
@@ -95,7 +87,6 @@ public class AddOrEditPagesTest extends AdminTestBase {
         location.editButton();
         Thread.sleep(2000);
         test.fillLatitude("");
-        Thread.sleep(2000);
     }
     @Test
     public void VerifyFunctionalityOfEditLocationByFillLongitude() throws InterruptedException {
@@ -104,25 +95,18 @@ public class AddOrEditPagesTest extends AdminTestBase {
         location.editButton();
         Thread.sleep(2000);
         test.fillLongitude("");
-        Thread.sleep(2000);
     }
-    @Test
+    @Test//Asserting
     public void VerifyFunctionalityOfAddNewLocationByFillRequirements() throws InterruptedException {
         settings.GoToLocations();
         Thread.sleep(2000);
         location.addButton();
         Thread.sleep(2000);
         test.fillStatusDropList("");
-        Thread.sleep(2000);
         test.fillCity("");
-        Thread.sleep(2000);
         test.fillCountryDropList("");
-        Thread.sleep(2000);
         test.fillLatitude("");
-        Thread.sleep(2000);
         test.fillLongitude("");
-        Thread.sleep(2000);
-
     }
     @Test
     public void VerifyFunctionalityOfEditLocationByFillRequirement() throws InterruptedException {
@@ -131,15 +115,9 @@ public class AddOrEditPagesTest extends AdminTestBase {
         location.editButton();
         Thread.sleep(2000);
         test.fillStatusDropList("");
-        Thread.sleep(2000);
         test.fillCity("");
-        Thread.sleep(2000);
         test.fillCountryDropList("");
-        Thread.sleep(2000);
         test.fillLatitude("");
-        Thread.sleep(2000);
         test.fillLongitude("");
-        Thread.sleep(2000);
-        Thread.sleep(2000);
     }
 }

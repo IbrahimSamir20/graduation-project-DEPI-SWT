@@ -117,7 +117,7 @@ public class FlightTabTest extends MainPageTestBase{
         }
     }
     @Test
-    public void searchNumberofTravellers() throws InterruptedException {
+    public void searchNumberOfTravellers() throws InterruptedException {
         Thread.sleep(2000);
         flightTabPage.clickOnTravellersButton();
         Thread.sleep(2000);
@@ -140,7 +140,7 @@ public class FlightTabTest extends MainPageTestBase{
         }
     }
     @Test
-    public void searchNegitiveNumberofTravellers() throws InterruptedException {
+    public void searchNegativeNumberOfTravellers() throws InterruptedException {
          Thread.sleep(2000);
         flightTabPage.clickOnTravellersButton();
         Thread.sleep(2000);

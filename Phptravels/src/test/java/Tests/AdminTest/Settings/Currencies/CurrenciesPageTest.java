@@ -17,140 +17,117 @@ public class CurrenciesPageTest extends AdminTestBase {
         settings.GoToCurrencies();
         Thread.sleep(2000);
         currencies.sortByStatusButton();
-        Thread.sleep(5000);
     }
     @Test
     public void  VerifyFunctionalityOfSortingCountriesByStatusOffToOn() throws InterruptedException {
         settings.GoToCurrencies();
         Thread.sleep(2000);
         currencies.sortByStatusButton();
-        Thread.sleep(2000);
         currencies.sortByAec();
-        Thread.sleep(5000);
     }
     @Test
     public void  VerifyFunctionalityOfSortingCountriesByDefaultOnToOff() throws InterruptedException {
         settings.GoToCurrencies();
         Thread.sleep(2000);
         currencies.sortByDefaultButton();
-        Thread.sleep(5000);
     }
     @Test
     public void  VerifyFunctionalityOfSortingCountriesByDefaultOffToOn() throws InterruptedException {
         settings.GoToCurrencies();
         Thread.sleep(2000);
         currencies.sortByDefaultButton();
-        Thread.sleep(2000);
         currencies.sortByAec();
-        Thread.sleep(5000);
     }
     @Test
     public void  VerifyFunctionalityOfSortingCountriesByNameAToZ() throws InterruptedException {
         settings.GoToCurrencies();
         Thread.sleep(2000);
         currencies.sortByNameButton();
-        Thread.sleep(5000);
     }
     @Test
     public void  VerifyFunctionalityOfSortingCountriesByNameZToA() throws InterruptedException {
         settings.GoToCurrencies();
         Thread.sleep(2000);
         currencies.sortByNameButton();
-        Thread.sleep(2000);
         currencies.sortByAec();
-        Thread.sleep(5000);
     }
     @Test
     public void  VerifyFunctionalityOfSortingCountriesByRateAToZ() throws InterruptedException {
         settings.GoToCurrencies();
         Thread.sleep(2000);
         currencies.sortByRateButton();
-        Thread.sleep(5000);
     }
     @Test
     public void  VerifyFunctionalityOfSortingCountriesByRateZToA() throws InterruptedException {
         settings.GoToCurrencies();
         Thread.sleep(2000);
         currencies.sortByRateButton();
-        Thread.sleep(2000);
         currencies.sortByAec();
-        Thread.sleep(5000);
     }
     @Test
     public void VerifyFunctionalityOfSearchButton () throws InterruptedException {
         settings.GoToCurrencies();
         Thread.sleep(2000);
         currencies.searchButton();
-        Thread.sleep(5000);
     }
     @Test
     public void VerifyFunctionalityOfAddButton () throws InterruptedException {
         settings.GoToCurrencies();
         Thread.sleep(2000);
         currencies.addButton();
-        Thread.sleep(5000);
     }
     @Test
     public void VerifyFunctionalityOfEditButton () throws InterruptedException {
         settings.GoToCurrencies();
         Thread.sleep(2000);
         currencies.editButton();
-        Thread.sleep(5000);
     }
     @Test
     public void VerifyFunctionalityOfDeleteButton () throws InterruptedException {
         settings.GoToCurrencies();
         Thread.sleep(2000);
         currencies.deleteButton();
-        Thread.sleep(5000);
     }
     @Test
     public void VerifyFunctionalityOfDisplay50Button () throws InterruptedException {
         settings.GoToCurrencies();
         Thread.sleep(2000);
         currencies.display50itemsButton();
-        Thread.sleep(5000);
     }
     @Test
     public void VerifyFunctionalityOfDisplay100Button() throws InterruptedException {
         settings.GoToCurrencies();
         Thread.sleep(2000);
         currencies.display100itemsButton();
-        Thread.sleep(5000);
     }
     @Test
     public void VerifyFunctionalityOfDisplayAllButton () throws InterruptedException {
         settings.GoToCurrencies();
         Thread.sleep(2000);
         currencies.displayAllItemsButton();
-        Thread.sleep(5000);
     }
     @Test
     public void VerifyFunctionalityOfSelectAllButton () throws InterruptedException {
         settings.GoToCurrencies();
         Thread.sleep(2000);
         currencies.selectAllButton();
-        Thread.sleep(5000);
     }
     @Test
     public void VerifyFunctionalityOfSelectAnItemButton () throws InterruptedException {
         settings.GoToCurrencies();
         Thread.sleep(2000);
         currencies.selectItem();
-        Thread.sleep(5000);
     }
     @Test
     public void VerifyFunctionalityOfStatusButton () throws InterruptedException{
         settings.GoToCurrencies();
         Thread.sleep(2000);
         currencies.statusButton();
-        Thread.sleep(5000);
     }
     @Test
     public void VerifyFunctionalityOfDefaultButton () throws InterruptedException{
         settings.GoToCurrencies();
         Thread.sleep(2000);
         currencies.defaultButton();
-        Thread.sleep(5000);
     }
 }

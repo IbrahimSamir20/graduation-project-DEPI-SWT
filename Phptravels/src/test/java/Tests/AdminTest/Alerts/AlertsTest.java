@@ -12,14 +12,12 @@ public class AlertsTest extends AdminTestBase {
         login = new AdminLoginHelper();
         Thread.sleep(2000);
         alert = new AlertsBase(AdminDriver);
-        Thread.sleep(2000);
     }
     @Test
     public void VerifyFunctionalityOfAlertButton () throws InterruptedException{
         login.adminLogin();
         Thread.sleep(2000);
         alert.displayAlerts();
-        Thread.sleep(2000);
     }
     @Test
     public void VerifyFunctionalityOfDeleteAlertButton () throws InterruptedException{
@@ -28,6 +26,5 @@ public class AlertsTest extends AdminTestBase {
         alert.displayAlerts();
         Thread.sleep(2000);
         alert.deleteAlert();
-        Thread.sleep(2000);
     }
 }
