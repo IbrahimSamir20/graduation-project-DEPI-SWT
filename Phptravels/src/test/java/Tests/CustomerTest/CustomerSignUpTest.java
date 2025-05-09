@@ -10,7 +10,7 @@ public class CustomerSignUpTest extends MainPageTestBase {
 
     @BeforeMethod
     public void init() {
-        SignUp = new CustomerSignUp(driver);
+        SignUp = new CustomerSignUp(MainDriver);
     }
 
     @Test

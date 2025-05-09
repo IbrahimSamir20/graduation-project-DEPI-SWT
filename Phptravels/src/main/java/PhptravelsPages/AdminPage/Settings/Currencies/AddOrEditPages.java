@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 public class AddOrEditPages extends PageBase{
     By StatusDropList = By.xpath("(//*[@class=\"select2-selection select2-selection--single\"])[1]");
     By StatusTextField = By.xpath("//*[@class=\"select2-search__field\"]");
-    By Name = By.xpath("(//*[@class=\"xcrud-input form-control\"])[1]");
+    public By Name = By.xpath("(//*[@class=\"xcrud-input form-control\"])[1]");
     By CountryDropList = By.xpath("(//*[@class=\"select2-selection select2-selection--single\"])[2]");
     By CountryTextField = By.xpath("//*[@class=\"select2-search__field\"]");
     By Rate = By.xpath("(//*[@class=\"xcrud-input form-control\"])[2]");
@@ -14,13 +14,13 @@ public class AddOrEditPages extends PageBase{
     public AddOrEditPages(WebDriver driver) {
         super(driver);
     }
-    public void fillStatusDropList(String status){
+    public void fillStatusDropList(String status) throws InterruptedException {
         sendKeysToDropList(StatusDropList,StatusTextField,status);
     }
     public void name (String name){
         sendKeys(Name,name);
     }
-    public void fillCountryTextField(String country){
+    public void fillCountryTextField(String country) throws InterruptedException {
         sendKeysToDropList(CountryDropList,CountryTextField,country);
     }
     public void rate(String rate){

@@ -13,7 +13,7 @@ public class AgentSignUpTest extends MainPageTestBase {
 
     @BeforeMethod
     public void init() {
-        SignUp = new AgentSignUp(driver);
+        SignUp = new AgentSignUp(MainDriver);
     }
 
     @Test

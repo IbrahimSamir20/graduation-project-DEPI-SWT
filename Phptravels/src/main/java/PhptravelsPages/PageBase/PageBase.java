@@ -53,10 +53,12 @@ public class PageBase {
         Actions actions = new Actions(driver);
         actions.dragAndDrop(source, target).perform();
     }
-    public void sendKeysToDropList (By element1,By element2, String keys) {
+    public void sendKeysToDropList (By element1,By element2, String keys) throws InterruptedException {
         waiTimeToBeClickable(element1);
         driver.findElement(element1).click();
         waiTimeToBeVisible(element2);
-        driver.findElement(element2).sendKeys(keys + Keys.ENTER);
+        driver.findElement(element2).sendKeys(keys);
+        Thread.sleep(200);
+        driver.findElement(element2).sendKeys(Keys.ENTER);
     }
 }

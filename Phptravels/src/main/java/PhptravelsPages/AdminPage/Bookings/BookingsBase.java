@@ -8,12 +8,6 @@ public class BookingsBase extends PageBase {
     By ModuleType = By.xpath("//*[@class=\"form-select module\"]");
     By BookingStatus =By.xpath("//*[@class=\"form-select booking_status\"]");
     By PaymentStatus = By.xpath("//*[@class=\"form-select payment_status\"]");
-    By BookingDateButton = By.xpath("class=\"form-control booking_date calendar\"");
-    By NextMonthButton = By.xpath("(//*[@class=\"next\"])[1]");
-    By PervMonthButton = By.xpath("(//*[@class=\"prev\"])[1]");
-    By SwitchYearButton = By.xpath("(//*[@class=\"switch\"])[1]");
-    By NextYearButton = By.xpath("(//*[@class=\"next\"])[2]");
-    By PrevYearButton = By.xpath("(//*[@class=\"prev\"])[2]");
     By SearchButton = By.xpath("//*[@class=\"btn btn-primary w-100 h-100 rounded-4\"]");
     By BackButton = By.xpath("//*[@class=\"loading_effect btn btn-warning\"]");
     public BookingsBase(WebDriver driver) {
@@ -34,9 +28,6 @@ public class BookingsBase extends PageBase {
     public void setPaymentStatus (String option){
         selectDropDown(PaymentStatus,option);
     }
-    /**********Date********/
-    public void setbookingDate (){}
-    /**********************/
     public void clickSearchButton(){
         clickOnElement(SearchButton);
     }

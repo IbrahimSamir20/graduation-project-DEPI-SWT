@@ -13,7 +13,7 @@ public class LoginPageTest extends MainPageTestBase {
 
     @BeforeMethod
     public void init() {
-        login = new AdminLoginPage(driver);
+        login = new AdminLoginPage(MainDriver);
     }
 
     @Test
@@ -54,7 +54,7 @@ public class LoginPageTest extends MainPageTestBase {
         login.fillPassword("demoadmin");
         login.clickLoginButton();
 
-        WebElement error = driver.findElement(By.className("alert-danger"));
+        WebElement error = MainDriver.findElement(By.className("alert-danger"));
         Assert.assertTrue(error.isDisplayed(), "Error message not shown for empty email.");
     }
 

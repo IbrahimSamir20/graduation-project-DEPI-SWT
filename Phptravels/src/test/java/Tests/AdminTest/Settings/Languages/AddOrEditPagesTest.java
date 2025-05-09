@@ -4,6 +4,7 @@ import Helper.AssertionHelper;
 import PhptravelsPages.AdminPage.Settings.Languages.AddOrEditPages;
 import PhptravelsPages.AdminPage.Settings.Languages.LanguagePage;
 import Tests.TestBase.AdminTestBase;
+import org.openqa.selenium.By;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 public class AddOrEditPagesTest extends AdminTestBase {
@@ -25,7 +26,7 @@ public class AddOrEditPagesTest extends AdminTestBase {
         language.addButton();
         Thread.sleep(2000);
         test.statusDropList("Enabled");
-        Assert.assertDropListSelection(test.StatusDropList,"Enabled" );
+        Assert.assertDropListSelection(AdminDriver,test.StatusDropList,"Enabled" );
 
     }
     @Test
@@ -35,7 +36,7 @@ public class AddOrEditPagesTest extends AdminTestBase {
         language.addButton();
         Thread.sleep(2000);
         test.countryDropList("Egypt");
-        Assert.assertDropListSelection(test.CountryDropList, "EGYPT");
+        Assert.assertDropListSelection(AdminDriver,test.CountryDropList, "EGYPT");
     }
     @Test
     public void  VerifyFunctionalityOfFillLanguageCode() throws InterruptedException {
@@ -44,7 +45,7 @@ public class AddOrEditPagesTest extends AdminTestBase {
         language.addButton();
         Thread.sleep(2000);
         test.fillLanguageCode("ar");
-        Assert.assertingOfTextField(test.LanguageCode,"ar");
+        Assert.assertingOfTextField(AdminDriver,test.LanguageCode,"ar");
     }
     @Test
     public void  VerifyFunctionalityOfFillName() throws InterruptedException {
@@ -53,7 +54,7 @@ public class AddOrEditPagesTest extends AdminTestBase {
         language.addButton();
         Thread.sleep(2000);
         test.fillName("Egypt");
-        Assert.assertingOfTextField(test.Name,"Egypt");
+        Assert.assertingOfTextField(AdminDriver,test.Name,"Egypt");
     }
     @Test
     public void VerifyFunctionalityOfSelectOptionFromType() throws InterruptedException {
@@ -62,7 +63,7 @@ public class AddOrEditPagesTest extends AdminTestBase {
         language.addButton();
         Thread.sleep(2000);
         test.typeDropList("RTL");
-        Assert.assertDropListSelection(test.TypeDropList,"RTL");
+        Assert.assertDropListSelection(AdminDriver,test.TypeDropList,"RTL");
     }
     @Test
     public void  VerifyFunctionalityOfSaveButtonWithoutEnterData() throws InterruptedException {
@@ -72,7 +73,7 @@ public class AddOrEditPagesTest extends AdminTestBase {
         Thread.sleep(2000);
         test.saveButton();
         Thread.sleep(2000);
-        Assert.assertElementIsVisible(test.SaveButton);
+        Assert.assertElementIsVisible(AdminDriver,By.xpath("//*[@class=\"xcrud-message error\"]"));
     }
     @Test
     public void VerifyFunctionalityOfSaveButtonWithFillData() throws InterruptedException {
@@ -87,7 +88,7 @@ public class AddOrEditPagesTest extends AdminTestBase {
         test.typeDropList("RTL");
         test.saveButton();
         Thread.sleep(2000);
-        Assert.assertElementIsVisible(test.EgyFlag);
+        Assert.assertElementIsVisible(AdminDriver,test.EgyFlag);
     }
     @Test
     public void VerifyFunctionalityOfReturnButton() throws InterruptedException {
@@ -101,6 +102,7 @@ public class AddOrEditPagesTest extends AdminTestBase {
         test.fillName("Egypt");
         test.typeDropList("RTL");
         test.returnButton();
-        Assert.assertElementIsVisible(test.EgyFlag);
+        Thread.sleep(2000);
+        Assert.assertElementIsVisible(AdminDriver,By.xpath("//*[@class=\"flag germany\"]"));
     }
 }

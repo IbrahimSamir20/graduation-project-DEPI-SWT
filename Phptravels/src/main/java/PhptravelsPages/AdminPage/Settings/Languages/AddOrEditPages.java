@@ -17,10 +17,10 @@ public class AddOrEditPages extends PageBase{
     public AddOrEditPages(WebDriver driver) {
         super(driver);
     }
-    public void statusDropList (String option){
+    public void statusDropList (String option) throws InterruptedException {
         sendKeysToDropList(StatusDropList,StatusTextField,option);
     }
-    public void countryDropList (String option){
+    public void countryDropList (String option) throws InterruptedException {
         sendKeysToDropList(CountryDropList,CountryTextField,option);
     }
     public void fillLanguageCode (String languageCode){
@@ -29,7 +29,7 @@ public class AddOrEditPages extends PageBase{
     public void fillName (String name){
         sendKeys(Name,name);
     }
-    public void typeDropList (String option){
+    public void typeDropList (String option) throws InterruptedException {
         sendKeysToDropList(TypeDropList,TypeTextField,option);
     }
     public void saveButton (){
