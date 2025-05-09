@@ -3,14 +3,14 @@ import PhptravelsPages.PageBase.PageBase;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 public class CurrenciesPage extends PageBase {
-    By SelectAllButton = By.xpath("//*[@class=\"form-check-input \"]");
-    By SelectItemButton = By.xpath("(//*[@class=\"checkboxcls form-check-input\"])[1]");
+    public By SelectAllButton = By.xpath("//*[@class=\"form-check-input \"]");
+    public By SelectItemButton = By.xpath("(//*[@class=\"checkboxcls form-check-input\"])[1]");
     By SortStatusButtonDesc = By.xpath("(//*[@class=\"xcrud-column xcrud-action\"])[1]");
     By SortByAec = By.xpath("//*[@class=\"xcrud-column xcrud-action xcrud-current xcrud-desc\"]");
     By SortDefaultButtonDesc = By.xpath("(//*[@class=\"xcrud-column xcrud-action\"])[2]");
     By SortNameButtonDesc = By.xpath("(//*[@class=\"xcrud-column xcrud-action\"])[4]");
-    By StatusButton = By.xpath("(//*[@class=\"updated_status form-check-input\"])[1]");
-    By DefaultButton = By.xpath("(//*[@class=\"makeDefault form-check-input\"])[1]");
+    public By StatusButton = By.xpath("(//*[@class=\"updated_status form-check-input\"])[1]");
+    public By DefaultButton = By.xpath("(//*[@class=\"makeDefault form-check-input\"])[1]");
     By SortRateButton = By.xpath("(//*[@class=\"xcrud-column xcrud-action\"])[5]");
     By AddButton = By.xpath("//*[@class=\"xcrud-button xcrud-green xcrud-action\"]");
     By SearchButton = By.xpath("//*[@class=\"xcrud-search-toggle xcrud-button xcrud-cyan\"]");

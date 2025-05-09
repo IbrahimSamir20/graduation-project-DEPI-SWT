@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 public class AlertsBase extends PageBase{
     By AlertsButton = By.xpath("//*[@class=\"d-flex justify-content-between w-100\"]");
-    By DeleteAlertButton = By.xpath("(//*[@class=\"btn btn-warning btn-sm p-3 py-0\"])[1]");
+    By DeleteAlertButton = By.xpath("(//*[@class=\"btn btn-warning btn-sm p-3 py-0\"])[7]");
     public AlertsBase(WebDriver driver) {
         super(driver);
     }

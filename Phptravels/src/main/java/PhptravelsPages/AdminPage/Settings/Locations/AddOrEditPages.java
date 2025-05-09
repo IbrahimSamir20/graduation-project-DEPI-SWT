@@ -13,13 +13,13 @@ public class AddOrEditPages extends PageBase {
     public AddOrEditPages(WebDriver driver) {
         super(driver);
     }
-    public void fillStatusDropList (String status){
+    public void fillStatusDropList (String status) throws InterruptedException {
         sendKeysToDropList(StatusDropList,StatusTextField,status);
     }
     public void fillCity (String city){
         sendKeys(CityTextField,city);
     }
-    public void fillCountryDropList (String country){
+    public void fillCountryDropList (String country) throws InterruptedException {
         sendKeysToDropList(CountryDropList,CountryTextField,country);
     }
     public void fillLatitude (String latitude){

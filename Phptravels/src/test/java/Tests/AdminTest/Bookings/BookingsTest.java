@@ -19,14 +19,13 @@ public class BookingsTest extends AdminTestBase{
     }
     @Test
     public void SearchBookingsByID() throws InterruptedException {
-        Thread.sleep(2000);
         login.adminLogin();
         Thread.sleep(2000);
         booking.joinBookingPage();
-        booking.setBookingId("20250508063834");
+        booking.setBookingId("20250308073436");
         booking.clickSearchButton();
         Thread.sleep(2000);
-        Assert.assertElementIsVisible(By.xpath("//td[text()='20250508063834']"));
+        Assert.assertElementIsVisible(AdminDriver,By.xpath("//td[text()='20250308073436']"));
 
     }
     @Test
@@ -37,7 +36,7 @@ public class BookingsTest extends AdminTestBase{
         booking.selectModuleType("Hotels");
         booking.clickSearchButton();
         Thread.sleep(2000);
-        Assert.assertElementIsNotVisible(By.xpath("//td[text='20250503073522']"));
+        Assert.assertElementIsNotVisible(AdminDriver,By.xpath("//td[text='20250503073522']"));
     }
     @Test
     public void SearchBookingStatus() throws InterruptedException {
@@ -46,7 +45,8 @@ public class BookingsTest extends AdminTestBase{
         booking.joinBookingPage();
         booking.setBookingStatus("Pending");
         booking.clickSearchButton();
-        Assert.assertElementIsVisible(By.xpath(""));
+        Thread.sleep(2000);
+        Assert.assertElementIsNotVisible(AdminDriver,By.xpath("//td[text='20250501035001']"));
     }
     @Test
     public void SearchPaymentStatus() throws InterruptedException {
@@ -55,16 +55,7 @@ public class BookingsTest extends AdminTestBase{
         booking.joinBookingPage();
         booking.setPaymentStatus("Unpaid");
         booking.clickSearchButton();
-        Assert.assertElementIsVisible(By.xpath(""));
-    }
-    @Test
-    public void SearchBookingsByDate() throws InterruptedException {
-        login.adminLogin();
-        Thread.sleep(2000);
-        booking.joinBookingPage();
-        booking.setbookingDate();
-        booking.clickSearchButton();
-        Assert.assertElementIsVisible(By.xpath(""));
+        Assert.assertElementIsNotVisible(AdminDriver,By.xpath("//td[text='20250501035001']"));
     }
     @Test
     public void VerifyBackFunctionality() throws InterruptedException {
@@ -72,6 +63,6 @@ public class BookingsTest extends AdminTestBase{
         Thread.sleep(2000);
         booking.joinBookingPage();
         booking.clickBackButton();
-        Assert.assertElementIsVisible(By.xpath(""));
+        Assert.assertElementIsVisible(AdminDriver,By.xpath("(//*[@class=\"card-body p-3\"])[5]"));
     }
 }

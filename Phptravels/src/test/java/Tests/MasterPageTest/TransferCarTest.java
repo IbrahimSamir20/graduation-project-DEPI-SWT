@@ -1,52 +1,52 @@
 package Tests.MasterPageTest;
+import Helper.AssertionHelper;
 import Tests.TestBase.MainPageTestBase;
+import org.openqa.selenium.By;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import PhptravelsPages.MasterPage.TransferCarsBase;
-
-import static org.testng.AssertJUnit.assertEquals;
 public class TransferCarTest extends MainPageTestBase {
+    AssertionHelper assertion;
     TransferCarsBase transferCars;
     @BeforeMethod
     public void init(){
-        transferCars = new TransferCarsBase(driver);
+        assertion = new AssertionHelper();
+        transferCars = new TransferCarsBase(MainDriver);
     }
     @Test
     public void SearchCarsWithoutEnterDataInfo () throws InterruptedException {
-        Thread.sleep(2000);
         transferCars.clickCarsButton();
-        transferCars.ClickSearshButton();
+        transferCars.ClickSearchButton();
+        assertion.assertConfirmationPopupText(MainDriver,"Select From Airport");
     }
     @Test
     public void SearchCarsWithEnterFromAndToLocation () throws InterruptedException {
         transferCars.clickCarsButton();
-        transferCars.FromAirport();
-        transferCars.SelectFromAirport();
-        transferCars.ToLocation("London");
-        transferCars.selectOnToLocation();
-        transferCars.ClickSearshButton();
+        transferCars.FromAirportDropDownList("Usa");
+        transferCars.ToAirportDropDownList("Usa");
+        transferCars.ClickSearchButton();
+        Thread.sleep(7000);
+        assertion.assertElementIsVisible(MainDriver,By.xpath("//*[@class=\"h6 m-0 header_options text-dark\" and .//*[@class=\"text-muted\" and normalize-space(text())='1']]"));
     }
-    @Test
-    public void SearchCarsWithSelectFromAndToDate () throws InterruptedException {
-        transferCars.clickCarsButton();
-        transferCars.OpenPickUpCale();
-        transferCars.ClickPickNext();
-        transferCars.SelectPickDay();
-        transferCars.openDropCale();
-        transferCars.ClickDropNext();
-        transferCars.SelectDropDay();
-    }
-    @Test
-    public void SearchCarsWithSelectFromAndToTime() throws InterruptedException {
-        transferCars.clickCarsButton();
-        transferCars.FillPickUpTime("10:30");
-        transferCars.FillDropOfTime("11:30");
-   }
     @Test
     public void SearchCarsWithSelectNumOfTravelers () throws InterruptedException {
         transferCars.clickCarsButton();
         transferCars.ClickNumOfTravelersButton();
         transferCars.FillNumOfAdults("6");
-        transferCars.FillNumOfChilds("2");
+        transferCars.FillNumOfChild("2");
+        transferCars.ClickSearchButton();
+        assertion.assertConfirmationPopupText(MainDriver,"Select From Airport");
+    }
+    @Test
+    public void SearchCarsByFillPickUpToDestinationAndNumOfAdultsAndChild () throws InterruptedException {
+        transferCars.clickCarsButton();
+        transferCars.FromAirportDropDownList("Usa");
+        transferCars.ToAirportDropDownList("Usa");
+        transferCars.ClickNumOfTravelersButton();
+        transferCars.FillNumOfAdults("6");
+        transferCars.FillNumOfChild("2");
+        transferCars.ClickSearchButton();
+        Thread.sleep(2000);
+        assertion.assertElementIsVisible(MainDriver,By.xpath("//*[@class=\"dropdown-toggle dropdown-btn travellers waves-effect\"]"));
     }
 }

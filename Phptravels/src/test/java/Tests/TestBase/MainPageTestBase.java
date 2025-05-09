@@ -6,19 +6,19 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 public class MainPageTestBase {
-    public static WebDriver driver;
+    public static WebDriver MainDriver;
     @BeforeMethod
     public void openBrowser () throws InterruptedException{
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-dev-shm-usage");
-        driver = new ChromeDriver(options);
-        driver.get("https://phptravels.net");
-        System.out.println(driver.getTitle());
+        MainDriver = new ChromeDriver(options);
+        MainDriver.get("https://phptravels.net");
+        System.out.println(MainDriver.getTitle());
     }
     @AfterMethod
     public  void closeBrowser (){
-        driver.quit();
+        MainDriver.quit();
     }
 }

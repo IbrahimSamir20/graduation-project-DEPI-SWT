@@ -3,7 +3,7 @@ import PhptravelsPages.PageBase.PageBase;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 public class LanguagePage extends PageBase {
-    By SelectAllButton = By.xpath("(//*[@class=\"form-check\"])[1]");
+    public By SelectAllButton = By.xpath("(//*[@class=\"form-check\"])[1]");
     By SortStatus = By.xpath("(//*[@class=\"xcrud-column xcrud-action\"])[1]");
     By SortCountry = By.xpath("(//*[@class=\"xcrud-column xcrud-action\"])[2]");
     By SortLanguageCode = By.xpath("(//*[@class=\"xcrud-column xcrud-action\"])[3]");
@@ -11,8 +11,8 @@ public class LanguagePage extends PageBase {
     By SortDefault = By.xpath("(//*[@class=\"xcrud-column xcrud-action\"])[5]");
     By SortType = By.xpath("(//*[@class=\"xcrud-column xcrud-action\"])[6]");
     By SortAsc = By.xpath("//*[@class=\"xcrud-column xcrud-action xcrud-current xcrud-desc\"]");
-    By StatusButton = By.xpath("(//*[@class=\"updated_status form-check-input\"])[1]");
-    By DefaultButton = By.xpath("(//*[@class=\"makeDefault form-check-input\"])[1]");
+    public By StatusButton = By.xpath("(//*[@class=\"updated_status form-check-input\"])[1]");
+    public By DefaultButton = By.xpath("(//*[@class=\"makeDefault form-check-input\"])[1]");
     By TranslationButton = By.xpath("(//*[@class=\"xcrud-button\"])[1]");
     By EditButton = By.xpath("(//*[@class=\"xcrud-action xcrud-button xcrud-orange\"])[1]");
     By DeleteButton = By.xpath("(//*[@class=\"xcrud-action xcrud-button xcrud-red\"])[1]");

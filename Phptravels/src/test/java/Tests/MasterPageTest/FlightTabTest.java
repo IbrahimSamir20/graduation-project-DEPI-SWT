@@ -10,8 +10,8 @@ public class FlightTabTest extends MainPageTestBase{
     ResultPage resultPage;
     @BeforeMethod
     public void init(){
-        flightTabPage = new FlightTabPage(driver);
-        resultPage = new ResultPage(driver);
+        flightTabPage = new FlightTabPage(MainDriver);
+        resultPage = new ResultPage(MainDriver);
     }
     public void flyingFromAndDestinationTo() throws InterruptedException {
         Thread.sleep(2000);
