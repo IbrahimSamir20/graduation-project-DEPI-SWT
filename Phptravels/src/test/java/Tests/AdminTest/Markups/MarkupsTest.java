@@ -1,18 +1,22 @@
 package Tests.AdminTest.Markups;
 
 import Helper.AdminLoginHelper;
+import Helper.AssertionHelper;
 import PhptravelsPages.AdminPage.Markups.MarkupsBase;
 import Tests.TestBase.AdminTestBase;
+import org.openqa.selenium.By;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class MarkupsTest extends AdminTestBase {
     MarkupsBase markupsBase;
     AdminLoginHelper login;
+    AssertionHelper assertionHelper;
     @BeforeMethod
     public void init (){
         markupsBase = new MarkupsBase(AdminDriver);
         login = new AdminLoginHelper();
+        assertionHelper=new AssertionHelper();
     }
 
     @Test
@@ -20,6 +24,8 @@ public class MarkupsTest extends AdminTestBase {
      login.adminLogin();
      markupsBase.clickOnMarkupsBtn();
      markupsBase.clickOnUserBtn();
+//     assertionHelper.assertElementIsNotVisible(AdminDriver, By.xpath("(//th[@class=\"xcrud-column xcrud-action\"])[2]"));
+
     }
 
     @Test

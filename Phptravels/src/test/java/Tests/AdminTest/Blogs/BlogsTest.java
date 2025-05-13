@@ -2,12 +2,12 @@ package Tests.AdminTest.Blogs;
 import Helper.AdminLoginHelper;
 import PhptravelsPages.AdminPage.Blogs.BlogsBase;
 import Tests.TestBase.AdminTestBase;
-import org.junit.Test;
+//import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import PhptravelsPages.AdminPage.AdminLoginPage.AdminLoginPage;
-import utils.DriverManager;
+import org.testng.annotations.Test;
 
 import java.sql.DriverManager;
 

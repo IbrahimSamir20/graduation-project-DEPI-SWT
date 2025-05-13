@@ -3,7 +3,8 @@ package Tests.AdminTest.Tours;
 import Helper.AdminLoginHelper;
 import PhptravelsPages.AdminPage.Tours.ToursBase;
 import Tests.TestBase.AdminTestBase;
-import org.junit.Test;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 
 public class ToursTest extends AdminTestBase {
     ToursBase toursetting;

@@ -7,10 +7,10 @@ import org.openqa.selenium.WebDriver;
 public class MarkupsBase extends PageBase {
     By markupsBtn = By.xpath("(//*[@class=\"mb-0\"])[4]");
     By userBtn = By.xpath("//a[@href=\"./markups.php?module=users\"]");
-    By flightsBtn = By.xpath("//a[href=\"./markups?module=flights\"]");
-    By hotelsBtn = By.xpath("//a[href=\"./markups?module=hotels\"]");
-    By toursBtn = By.xpath("//a[href=\"./markups?module=tours\"]");
-    By carsBtn = By.xpath("//a[href=\"./markups?module=cars\"]");
+    By flightsBtn = By.xpath("//a[@href=\"./markups?module=flights\"]");
+    By hotelsBtn = By.xpath("//a[@href=\"./markups?module=hotels\"]");
+    By toursBtn = By.xpath("//a[@href=\"./markups?module=tours\"]");
+    By carsBtn = By.xpath("//a[@href=\"./markups?module=cars\"]");
 
 
     public MarkupsBase(WebDriver driver) {
